@@ -10,11 +10,14 @@ public class Baby {
     private final JPanel panel;
 
     Baby(Color bgColor) {
+        ImageIcon imageBaby = new ImageIcon("baby-removebg2.png");
+        JLabel label = new JLabel(imageBaby);
         panel = new JPanel();
-        panel.setBounds(150, 490, 50, 55);
-        panel.setBackground(Color.PINK);
-        panel.setLayout(null);
+        panel.setBounds(150, 490, 50, 75);
+        panel.setBackground(bgColor);
+        panel.add(label);
 
+/*
         ajouterCoins(panel, bgColor, 5);
 
         JPanel oeil1 = new JPanel();
@@ -43,8 +46,11 @@ public class Baby {
         panel.add(bouche2);
         panel.add(bouche3);
 
+ */
+
     }
 
+    /*
     public void ajouterCoins(JPanel panel, Color color, int pas){
         int width = panel.getWidth();
         int height = panel.getHeight();
@@ -70,6 +76,8 @@ public class Baby {
         panel.add(coin4);
     }
 
+ */
+
     public void moveLeft() {
         if (panel.getX() > 10) {
             moveX(-STEP);
@@ -77,7 +85,7 @@ public class Baby {
     }
 
     public void moveRight() {
-        if (panel.getX() < 290) {
+        if (panel.getX() < 340) {
             moveX(STEP);
         }
     }
